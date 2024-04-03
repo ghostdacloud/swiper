@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 20px;
+    height: 62px;
+    background-color: black;
+    position: sticky;
+    top: 0px;
+    transition: 1s;
+}
+
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.4rem;
+}
+
+
+nav~div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    background-color: darkblue;
+    color: greenyellow;
+    margin-bottom: 10px;
+    height: calc(100vh - 62px);
+}
+.btt-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 70px;
+    height: 70px;
+    color: white;
+    background-color: black;
+    border-radius: 10px;
+    font-size: 2rem;
+    animation-name: move;
+    animation-duration: .8s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+}.btt-btn:hover {
+    color: orangered;
+    background-color: rgb(21, 21, 21);
+}
+
+@keyframes move {
+    0%{
+        transform: translateY(-20%);
+    }
+}
+
+.overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    inset: 0px;
+    background-color: rgba(128, 128, 128, 0.426);
+    width: 100vw;
+    height: 100vh;
+    transform: scale(0);
+    transition: 1s;
+}
+
+.overlay.active {
+    transform: scale(1);
+}
+
+.modal {
+    width: 300px;
+    height: 300px;
+    background-color: white;
+}
+
